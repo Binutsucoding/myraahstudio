@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
 
-const Navbar = () => {
+const Nav = () => {
   const [activeLink, setActiveLink] = useState("about");
 
   const handleScroll = () => {
@@ -76,4 +76,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Nav;
