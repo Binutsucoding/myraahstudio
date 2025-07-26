@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "./components/NavBar";
-import ImageSection from "./components/ImageSection";
+import Navbar from "./Components/Navbar";
+import ImageSection from "./Components/ImageSection";
 import sectionsData from "./Data/sectionsData";
 import "./App.css";
 
