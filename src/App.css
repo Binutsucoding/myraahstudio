@@ -15,7 +15,6 @@ html {
 
 .app-container {
     overflow-x: hidden;
-    position: relative;
 }
 
 /* Navbar Styles */
@@ -108,67 +107,31 @@ html {
 
 /* Section Styling */
 .section {
-    padding: 60px 0 30px;
+    padding: 80px 0 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     scroll-snap-align: start;
     min-height: 100vh;
-    gap: 20px;
-    position: relative;
-}
-
-.section-image-container {
-    position: relative;
-    display: inline-block;
-    width: 90vw;
-    max-width: 1200px;
+    gap: 30px;
 }
 
 .section-image {
-    width: 100%;
+    width: 90vw;
+    max-width: 1200px;
     height: auto;
     object-fit: cover;
     border-radius: 30px;
-    transition: transform 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-    transform: rotate(0deg);
-    margin: 0 auto;
+    transform: scale(1.02);
+    margin: 10px auto;
 }
 
 .section-image:hover {
     transform: scale(1.05) rotateZ(1deg);
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
-}
-
-.image-overlay-logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 60px;
-    font-weight: bold;
-    color: white;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 10px 20px;
-    border-radius: 50%;
-    font-family: 'Prata', serif;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    z-index: 10;
-}
-
-/* Fixed Watermark Logo */
-.fixed-watermark-logo {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    width: 120px;
-    height: auto;
-    opacity: 0.06;
-    z-index: 0;
-    pointer-events: none;
-    user-select: none;
-    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.2));
 }
 
 /* Scroll Snap */
@@ -178,7 +141,7 @@ html {
 
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
-    .section-image-container {
+    .section-image {
         width: 95vw;
         max-width: 1000px;
     }
@@ -216,58 +179,26 @@ html {
     }
 
     .section {
-        padding: 30px 0 15px;
-        gap: 12px;
-    }
-
-    .section-image-container {
-        width: 95vw;
+        padding: 40px 0 20px;
+        gap: 15px;
     }
 
     .section-image {
+        width: 95vw;
+        margin: 0 auto;
         border-radius: 20px;
-    }
-
-    .image-overlay-logo {
-        font-size: 40px;
-        top: 10px;
-        left: 10px;
-        padding: 6px 14px;
-    }
-
-    .fixed-watermark-logo {
-        bottom: 20px;
-        right: 20px;
-        width: 80px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .logo {
-        font-size: 28px;
-    }
-
-    .section-image-container {
-        width: 100vw;
-        max-width: 100%;
-    }
-
     .section-image {
-        border-radius: 16px;
+        transform: scale(1.02) rotateZ(0deg);
+        /* Straight by default */
+        transition: all 0.5s ease-in-out;
     }
 
-    .section {
-        padding: 20px 0 10px;
-        gap: 8px;
-    }
-
-    .image-overlay-logo {
-        font-size: 30px;
-    }
-
-    .fixed-watermark-logo {
-        bottom: 10px;
-        right: 10px;
-        width: 60px;
+    .section-image:hover {
+        transform: scale(1.05) rotateZ(2deg);
+        /* Slight rotation on hover */
     }
 }
