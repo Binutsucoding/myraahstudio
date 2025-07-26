@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "./Components/Navbar";
-import ImageSection from "./Components/ImageSection";
-import sectionsData from "./Data/sectionsData";
 import "./App.css";
+import sectionsData from "./Data/sectionsData";
+import Navbar from "./components/Nav";
+import ImageSection from "./components/ImageSection";
 
 export default function App() {
   return (
